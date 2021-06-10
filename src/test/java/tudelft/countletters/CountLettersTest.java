@@ -17,4 +17,16 @@ public class CountLettersTest {
         Assertions.assertEquals(1, words);
     }
 
+    @Test
+    public void twowordsendwithr() {
+        int words = new CountLetters().count("never|ever");
+        Assertions.assertEquals(2, words);
+    }
+
+    @Test
+    public void wordsendnotwithrors() {
+        int words = new CountLetters().count("apple|banana");
+        Assertions.assertEquals(0, words);
+    }
+
 }
